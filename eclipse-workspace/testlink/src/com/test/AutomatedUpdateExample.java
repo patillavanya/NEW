@@ -68,9 +68,10 @@ driver.manage().window().maximize();
 
 driver.get("https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1");
 
-driver.findElement(By.id("Email")).sendKeys("lavanyapatil1877@gmail.com");
+driver.findElement(By.xpath("//input[@id='identifierId']")).sendKeys("lavanyapatil1877@gmail.com");
 
-driver.findElement(By.id("Passwd")).sendKeys("@santhu@676@");
+driver.findElement(By.xpath("//div[@id='identifierNext']//div[@class='ZFr60d CeoRYc']")).click();
+driver.findElement(By.xpath("//input[@name='password']")).sendKeys("@santhu@676@");
 driver.findElement(By.id("signIn")).click();
 driver.switchTo().defaultContent();
 
@@ -94,7 +95,7 @@ finally{
 
 	a.reportResult(testProject,testPlan,testCase,build,notes,result);
 
-driver.quit();
+driver.close();
 
 }
 
