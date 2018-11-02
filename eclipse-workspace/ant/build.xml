@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="ant">
+              	
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../Downloads/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="TestNG.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}plugins/org.testng_6.14.2.r201802161450.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/com.beust.jcommander_1.72.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache-extras.beanshell.bsh_2.0.0.b6.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.yaml.snakeyaml_1.17.0.jar"/>
+    </path>
+    <path id="ant.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="../../Downloads/testlink.eclipse.plugin_0.97.11/lib/commons-logging-1.1.jar"/>
+        <pathelement location="../../Downloads/testlink.eclipse.plugin_0.97.11/lib/testlink-api-client-2.0.jar"/>
+        <pathelement location="../../Downloads/testlink.eclipse.plugin_0.97.11/lib/ws-commons-util-1.0.2.jar"/>
+        <pathelement location="../../Downloads/testlink.eclipse.plugin_0.97.11/lib/xmlrpc-client-3.1.jar"/>
+        <pathelement location="../../Downloads/testlink.eclipse.plugin_0.97.11/lib/xmlrpc-client-3.1-sources.jar"/>
+        <pathelement location="../../Downloads/testlink.eclipse.plugin_0.97.11/lib/xmlrpc-common-3.1.jar"/>
+        <pathelement location="../../Downloads/testlink.eclipse.plugin_0.97.11/lib/xmlrpc-common-3.1-sources.jar"/>
+        <pathelement location="../../Downloads/testlink.eclipse.plugin_0.97.11/plugins/testlink.eclipse.plugin_0.20.9.jar"/>
+        <pathelement location="../../Downloads/hamcrest-core-1.3.jar"/>
+        <path refid="TestNG.libraryclasspath"/>
+        <pathelement location="../../Downloads/selenium-server-standalone-3.141.0.jar"/>
+        <pathelement location="../../Downloads/junit-4.11.jar"/>
+        <pathelement location="../../Downloads/libs/byte-buddy-1.8.15.jar"/>
+        <pathelement location="../../Downloads/libs/commons-codec-1.10.jar"/>
+        <pathelement location="../../Downloads/libs/commons-exec-1.3.jar"/>
+        <pathelement location="../../Downloads/libs/commons-logging-1.2.jar"/>
+        <pathelement location="../../Downloads/libs/guava-25.0-jre.jar"/>
+        <pathelement location="../../Downloads/libs/httpclient-4.5.5.jar"/>
+        <pathelement location="../../Downloads/libs/httpcore-4.4.9.jar"/>
+        <pathelement location="../../Downloads/libs/okhttp-3.10.0.jar"/>
+        <pathelement location="../../Downloads/libs/okio-1.14.1.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="ant.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+
+                
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+              	
+              	<target name="war" description="Bundles the application as a WAR file" depends="clean, build">
+              	    <mkdir dir="WebContent/WEB-INF/classes"/>
+              	     
+              	    <copy includeemptydirs="false" todir="WebContent/WEB-INF/classes">
+              	            <fileset dir="build/classes">
+              	            <include name="**/*.class"/>
+              	            </fileset>
+              	    </copy>
+              	     
+              	    <war destfile="UploadServlet30.war"
+              	        basedir="WebContent"
+              	        needxmlfile="false">
+              	    </war>
+              	</target>	
+</project>
+
