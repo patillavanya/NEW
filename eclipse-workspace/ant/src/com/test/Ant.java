@@ -45,7 +45,7 @@ driver.findElement(By.xpath("//input[@id='input_1']")).sendKeys("admin123!");
 driver.findElement(By.xpath("//button[@type='submit']")).click();
 //driver.switchTo().defaultContent();
 //wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("+Testlink")));
-result= TestLinkAPIResults.TEST_PASSED;
+result= TestLinkAPIResults.TEST_FAILED;
 notes="Executed successfully";
 }
 catch(Exception e){
@@ -54,7 +54,8 @@ notes="Execution failed";
 }
 finally{
 	a.reportResult(testProject,testPlan,testsuite,testCase,build,notes,result);
-driver.quit();
 }
+driver.quit();
+
 }
 }
