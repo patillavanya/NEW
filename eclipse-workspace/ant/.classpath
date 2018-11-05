@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" output="target/classes" path="src">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/madhu/Desktop/testlink-api-client-20091130/testlink-api-client-2.0.jar" sourcepath="C:/Users/madhu/Desktop/testlink-api-client-20091130/testlink-api-client-2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/madhu/Desktop/testlink-api-client-20091130/lib/commons-logging-1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/madhu/Desktop/testlink-api-client-20091130/lib/junit.jar"/>
-	<classpathentry kind="lib" path="C:/Users/madhu/Desktop/testlink-api-client-20091130/lib/ws-commons-util-1.0.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/madhu/Desktop/testlink-api-client-20091130/lib/xmlrpc-client-3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/madhu/Desktop/testlink-api-client-20091130/lib/xmlrpc-client-3.1-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/madhu/Desktop/testlink-api-client-20091130/lib/xmlrpc-common-3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/madhu/Desktop/testlink-api-client-20091130/lib/xmlrpc-common-3.1-sources.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/client-combined-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/client-combined-3.14.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/javaee-api-6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/junit-4.11.jar"/>
 	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/selenium-server-standalone-3.141.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/madhu/Desktop/selenium-java-client-driver-1.0.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/madhu/Desktop/selenium-server-2.7.0.jar"/>
-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="output" path="target/classes"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/testlink-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/testlink-2.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/testlink-api-client-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/testng-6.8.21.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/ws-commons-util-1.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/xmlrpc-client-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/xmlrpc-client-3.1-sources (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/xmlrpc-common-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/xmlrpc-common-3.1-sources (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/xmlrpc-common-3.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/libs/byte-buddy-1.8.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/libs/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/libs/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/libs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/libs/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/libs/httpclient-4.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/libs/httpcore-4.4.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/libs/okhttp-3.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/libs/okio-1.14.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/madhu/Downloads/testlink-api-client-20091130/testlink-api-client-2.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
 </classpath>
